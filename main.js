@@ -1,8 +1,8 @@
 const canvas = document.getElementById("canvas")
 const context = canvas.getContext("2d");
-
 var width = canvas.width = window.innerWidth;
 var  height = canvas.height = window.innerHeight;
+
 // Initially set to canvas half width/height, then set to mouse
 var src = {
 	x: width / 2,
@@ -62,6 +62,7 @@ class Circle {
 		this.r = 6 + 18 * Math.random()
 		this.color = this.getColour();
 	}
+	// Update position, shrink slightly
 	update() {
 		this.x += this.vx;
 		this.y += this.vy;
